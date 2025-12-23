@@ -1,66 +1,175 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Backend](https://img.shields.io/badge/Backend-Laravel-FF2D20.svg)](https://laravel.com/)  
+[![Project Type](https://img.shields.io/badge/Type-Car%20Rental%20Marketplace-blue.svg)](#)  
+[![Project Stage](https://img.shields.io/badge/Status-In%20Development-orange.svg)](#)  
+![Documentation](https://img.shields.io/badge/Documentation-WIP-blue.svg)  
+![Focus](https://img.shields.io/badge/Focus-Multi--Role%20Rental%20System-green.svg)
 
-## About Laravel
+</div>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<div align="center">
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**[VISION](#-vision) •  
+[FEATURE HIGHLIGHTS](#-feature-highlights) •  
+[SYSTEM MODULES](#-system-modules) •  
+[INSTALLATION](#-installation)**
 
-## Learning Laravel
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# 🚗 Vision
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**CarRent** is a car rental marketplace inspired by the Airbnb model, designed to connect car owners (lessors) with renters through a structured, role-based platform.
 
-## Laravel Sponsors
+The system allows renters to browse available cars, compare prices, select rental periods using a calendar-based flow, and complete reservations through checkout and payment.  
+At the same time, lessors can list vehicles, manage bookings, and control availability.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+The platform is built with **Laravel**, focusing on:
+- Real-world rental workflows
+- Clear role separation
+- Scalable marketplace architecture
+- Administrative oversight and reporting
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+# 🚀 Feature Highlights
 
-## Contributing
+## Public Website (Marketplace)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Core capabilities available to visitors and authenticated users:
 
-## Code of Conduct
+- **Home Page & Listings**
+  - Display available cars with pricing, location, and images
+  - Clean, card-based layout for browsing
+  - Direct access to listing details
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Search & Discovery**
+  - Search cars by keywords and location
+  - Filter available listings based on availability
 
-## Security Vulnerabilities
+- **Calendar-Based Rental Flow**
+  - Select rental start and end dates
+  - Automatic calculation of rental duration and cost
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Checkout & Payment**
+  - Reservation confirmation
+  - Payment flow after date selection
+  - Booking stored and tracked in the system
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Authentication & Role-Based Access
+
+The system is divided into three main roles, each with its own interface and permissions.
+
+---
+
+# 🧩 System Modules
+
+## 1) Lessor (Car Owner Portal)
+
+- Dedicated registration and login as a lessor
+- Dashboard to manage owned cars
+- Add car listings with:
+  - Rental location and address
+  - Daily rental price
+  - Availability
+  - Image gallery
+- Accept or reject booking requests
+- View rental history and booking status
+
+---
+
+## 2) Renter (Customer Portal)
+
+- User registration and authentication
+- Browse all available cars
+- Search and select suitable listings
+- Choose rental period using a calendar
+- Complete reservation and payment
+- View booking history
+- Reference link to Airbnb for conceptual UX comparison
+
+---
+
+## 3) Admin (System Management)
+
+- Centralized admin dashboard
+- View platform statistics:
+  - Total renters
+  - Total lessors
+  - Active and completed rentals
+- Full user management (renters and lessors)
+- Monitor all reservations
+- View sales and platform activity
+- Create, edit, update, and delete:
+  - Users
+  - Listings
+  - Reservations
+
+---
+
+# ⚙️ Installation
+
+To run the project locally, ensure you have **PHP**, **Composer**, and **MySQL** installed.
+
+
+1. **Clone the Repository**
+
+    ```bash
+    git clone https://github.com/Aseel-Aburumman/DreamRent.git
+    cd DreamRent
+    ```
+
+2. **Install Dependencies**  
+   Run the following command to install Laravel and its dependencies:
+
+    ```bash
+    composer install
+    ```
+
+3. **Environment Setup**  
+   Duplicate `.env.example` as `.env` and configure your database settings:
+
+    ```plaintext
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=DreamRent
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+
+4. **Generate Application Key**  
+   This key secures your application:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Database Migration and Seeding**  
+   Run the migrations to set up the database tables and initial data:
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6. **Start the Application**  
+   Launch the Laravel development server:
+
+    ```bash
+    php artisan serve
+    ```
+
+    DreamRent  is now live on [http://localhost:8000](http://localhost:8000)!
+
+---
+
+# 🎉 Get Started
+ 
+--- 
+
